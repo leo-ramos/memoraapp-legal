@@ -1,15 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800&display=swap');
+
+html {
+    background-color: #FFF8F5;
+    -webkit-font-smoothing: antialiased;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 800px;
-    margin: auto;
-    padding: 40px;
-    line-height: 1.7;
+    background-color: #FFFFFF;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    color: #6B7280;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 48px 40px;
+    line-height: 1.6;
+    border-radius: 24px;
+    border: 1px solid #F2ECE8;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+/* Simulando a barra no topo (top accent) do email */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #FF5A6E, #FF7A59, #FFB347);
+    border-radius: 24px 24px 0 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2B2D42;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 12px;
 }
 
 h1 {
-    color: #2D6CDF;
+    font-size: 34px;
+    line-height: 40px;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 36px;
+}
+
+p, li {
+    font-size: 16px;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 26px;
+    color: #6B7280;
+}
+
+p {
+    margin: 0 0 16px 0;
+}
+
+strong, b {
+    color: #2B2D42;
+    font-weight: 800;
 }
 
 a {
-    color: #2D6CDF;
+    color: #FF7A59;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de cards retirados do email */
+.card {
+    background: #FFFFFF;
+    border: 1px solid #EFE8E5;
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.card-security {
+    background: #FFF8F5;
+    border: 1px solid #FFE3D8;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.divider {
+    height: 1px;
+    background: #EFE8E5;
+    margin: 32px 0;
+    border: none;
+}
+
+/* Elementos do rodapé */
+.footer {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.footer p {
+    font-size: 15px;
+    color: #6B7280;
+    margin-bottom: 28px;
+}
+
+.footer .copyright {
+    font-size: 13px;
+    color: #9CA3AF;
+    margin-bottom: 0;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 680px) {
+    body {
+        margin: 20px;
+        padding: 32px 20px;
+        border-radius: 16px;
+    }
+
+    body::before {
+        border-radius: 16px 16px 0 0;
+    }
 }
